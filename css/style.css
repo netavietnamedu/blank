@@ -1,0 +1,13 @@
+.abc {
+    background: yellow
+}
+.deu {
+    background: blue
+}
+.xyz {
+    background: red url(https://baonguyenyam.github.io/fpt/images/learn/boxmodel/demo.png) center center no-repeat;
+    padding: 35px;
+    margin: 35px;
+    border: 5px solid blue;
+    border-radius: 50px;
+}
