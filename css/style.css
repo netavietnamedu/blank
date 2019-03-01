@@ -1,24 +1,10 @@
 .abc {
     background: red;
-    float: left;
-    width: 60%;
-    padding: 10px;
-    box-sizing: border-box
-}
-
-.xyz {
-    background: blue;
-    float: left;
-    width: 40%;
-    box-sizing: border-box;
+    display: flex;
+    height: 200px;
     padding: 10px
 }
-
-.clearfix:after {
-    clear: both;
-    content: "";
-    display: block;
-    height: 0;
-    line-height: 0;
-    visibility: hidden;
+.abc .item{
+    background: yellow;
+    padding: 10px
 }
