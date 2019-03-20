@@ -1,43 +1,95 @@
-.box-a, .box-b {
-    height: 100px;
-    width: 100px;
+.title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
 }
-
-.box-a {
+.title:before {
+    content: '';
+    display: block;
+    height: 3px;
     background: red;
+    width: 60px;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 2;
-    display: none
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
 }
-.box-b {
-    background: blue;
+.title:after {
+    content: '';
+    display: block;
+    height: 20px;
+    background: red;
+    width: 20px;
     position: absolute;
-    right: -1rem;
-    top: -1rem;
-    z-index: 1;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    left: 50%;
+    bottom: calc(-1rem + -9px);
+    transform: translateX(-50%);
 }
-
-.box-father {
+.box, .box-2{
     background: yellow;
-    padding: .5rem;
-    margin: 4rem;
+    padding: 3rem;
+    max-width: 200px;
+    margin: 3rem;
     position: relative;
-
+    overflow: hidden;
 }
-
-.box-gf {
-    max-width: 300px;
-    background: cyan;
-    padding: 4rem;
-    position: relative;
-    margin: 4rem;
+.box:before {
+    content: '';
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: 1s ease-in-out all;
+}
+.box:hover:before{
+    top: -50%
+}
+.box:after {
+    content: '';
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: 1s ease-in-out all;
+}
+.box:hover:after{
+    top: 50%
+}
+.box-2:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s ease-in-out all;
+}
+.box-2:hover:before{
+    box-shadow: 0 0 0 530px #000 inset;
+}
+.box-2 span {
+    z-index: -100;
+    opacity: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+    padding: 10px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transition: 1s ease-in-out all;
+    transform: rotate(0deg) translateX(-50%) translateY(-50%);
+}
+.box-2:hover span {
+    opacity: 1;
+    z-index: 10;
+    transform: rotate(360deg) translateX(-50%) translateY(-50%);
 }
